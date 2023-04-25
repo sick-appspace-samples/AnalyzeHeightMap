@@ -150,8 +150,8 @@ local function viewHeightMap()
       local scannedFrame = scanBox:translate(0, i * pixelSizeY, 0) -- Move scan box to the current frame
 
       v3D:clear()
-      local heightmapID = v3D:addHeightmap(heightMap, deco3D)
-      v3D:addShape(scannedFrame, helper.getDeco(failPassColor, 1, 1, FILL_ALPHA), nil, heightmapID)
+      v3D:addHeightmap(heightMap, deco3D)
+      v3D:addShape(scannedFrame, helper.getDeco(failPassColor, 1, 1, FILL_ALPHA))
       v3D:present()
       v2D:present()
       print( 'Time for processing + visualization: ' .. DateTime.getTimestamp() - profilingTime .. 'ms' )
